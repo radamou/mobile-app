@@ -1,5 +1,8 @@
 import * as React from 'react';
-import styles from './ButtonStyle'
+import { Ionicons } from '@expo/vector-icons';
+import { Text, View } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
+import { styles } from './ButtonStyle'
 
 export default function Button({ icon, label, onPress, isLastOption }) {
     return (
