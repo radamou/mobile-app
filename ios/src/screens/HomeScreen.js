@@ -4,6 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { MonoText } from '../components/StyledText';
 import { styles } from './HomeScreenStyle';
 import DevelopmentModeNotice from '../components/Dev/Debug'
+import ActionSheet from '../components/ActionSheet';
 
 export default function HomeScreen() {
   return (
@@ -39,6 +40,7 @@ export default function HomeScreen() {
             <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
           </TouchableOpacity>
         </View>
+        <ActionSheet/>
       </ScrollView>
 
       <View style={styles.tabBarInfoContainer}>
