@@ -3,6 +3,7 @@ import * as React from 'react';
 import { ScrollView } from 'react-native-gesture-handler';
 import Button  from '../components/Button';
 import { styles } from './LinksScreenStyle';
+import { createTwoButtonAlert } from '../components/actions/SimpleAlert';
 
 export default function LinksScreen() {
   return (
@@ -10,19 +11,25 @@ export default function LinksScreen() {
       <Button
         icon="md-school"
         label="Read the Expo documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://docs.expo.io')}
+        onPress={() => createTwoButtonAlert(
+          () => WebBrowser.openBrowserAsync('https://docs.expo.io')
+        )}
       />
 
       <Button
         icon="md-compass"
         label="Read the React Navigation documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://reactnavigation.org')}
+        onPress={() => createTwoButtonAlert(
+          () => WebBrowser.openBrowserAsync('https://reactnavigation.org')
+        )}
       />
 
       <Button
         icon="ios-chatboxes"
         label="Ask a question on the forums"
-        onPress={() => WebBrowser.openBrowserAsync('https://forums.expo.io')}
+        onPress={() => createTwoButtonAlert(
+          () => WebBrowser.openBrowserAsync('https://forums.expo.io')
+        )}
         isLastOption
       />
     </ScrollView>
