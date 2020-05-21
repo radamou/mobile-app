@@ -5,6 +5,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import ListScreen from '../screens/ListScreen';
+import Settings from '../screens/Settings';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -43,7 +44,7 @@ export default function BottomTabNavigator({ navigation, route }) {
       />
        <BottomTab.Screen
         name="Profil"
-        component={ListScreen}
+        component={Settings}
         options={{
           title: 'profil',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-settings" />,
